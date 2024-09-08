@@ -1,0 +1,90 @@
+@import url('https://fonts.google.com/specimen/Bad+Script');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-style: 'Bad Script',cursive;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: black;
+}
+
+h2{
+    /*color: transparent;*/
+   font-size: 100px;
+   letter-spacing: 1px;
+}
+
+h2 span{
+    animation: animate 3s linear infinite;
+    animation-delay: calc(0.1s);
+}
+
+#bgvideo{
+    position:fixed;
+    right: 0%;
+    bottom: 0%;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+}
+
+#bgaudio{
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    height: 20px;
+    width: 20rem;
+    z-index: 1;
+    padding:0 10 20px;
+}
+
+@keyframes animate{
+    0%
+    {
+        color: #fff;
+        filter:blur(2px) hue-rotate(0deg);
+        text-shadow: 0 0  10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 200px #00b3ff,
+        0 0 300px #00b3ff,
+        0 0 400px #00b3ff;
+    }
+    30% , 70%
+    {
+        color: #fff;
+        filter:blur(2px) hue-rotate(360deg);
+        text-shadow: 0 0  10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 40px #00b3ff,
+        0 0 80px #00b3ff,
+        0 0 120px #00b3ff,
+        0 0 200px #00b3ff,
+        0 0 300px #00b3ff,
+        0 0 400px #00b3ff;
+    }
+    100%
+    {
+        color:transparent;
+        box-shadow: none;
+        filter:blur(2px) hue-rotate(0deg);
+    }
+
+}
+
+@media(max-width:480px){
+    h2{
+    font-size: 3rem;
+
+}
+}
